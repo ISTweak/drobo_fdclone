@@ -1,6 +1,6 @@
 ### NCURSES ###
 _build_ncurses() {
-local VERSION="6.0"
+local VERSION="6.1"
 local FOLDER="ncurses-${VERSION}"
 local FILE="${FOLDER}.tar.gz"
 local URL="https://ftp.gnu.org/gnu/ncurses/${FILE}"
@@ -10,17 +10,19 @@ pushd "target/${FOLDER}"
 
 ./configure --host="${HOST}" --prefix="${DEST}" 
 make
-make install
+make install.includes
+make install.libs
+make install.data
 popd
 }
 
 
 ### FDCLONE ###
 _build_fdclone() {
-local VERSION="3.01b"
+local VERSION="3.01e"
 local FOLDER="FD-${VERSION}"
 local FILE="${FOLDER}.tar.gz"
-local URL="http://hp.vector.co.jp/authors/VA012337/soft/fd/${FILE}"
+local URL="http://www.unixusers.net/src/fdclone/${FILE}"
 
 _download_tgz "${FILE}" "${URL}" "${FOLDER}"
 pushd "target/${FOLDER}"

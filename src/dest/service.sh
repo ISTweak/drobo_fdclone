@@ -6,7 +6,7 @@
 . /etc/service.subr
 
 name="FD"
-version="3.01b"
+version="3.01e"
 description="FDclone is a file & directory maintenance tool for the UNIX based OS"
 
 prog_dir="$(dirname "$(realpath "${0}")")"
