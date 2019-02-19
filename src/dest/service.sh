@@ -5,13 +5,13 @@
 # import DroboApps framework functions
 . /etc/service.subr
 
-name="FD"
+name="fdclone"
 version="3.01e"
 description="FDclone is a file & directory maintenance tool for the UNIX based OS"
 
 prog_dir="$(dirname "$(realpath "${0}")")"
 fdfile="${prog_dir}/bin/fd"
-conffile="${fdfile}/etc/fd2rc"
+conffile="${prog_dir}/etc/fd2rc"
 
 tmp_dir="/tmp/DroboApps/${name}"
 pidfile="${tmp_dir}/pid.txt"
