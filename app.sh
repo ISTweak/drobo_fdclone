@@ -19,7 +19,7 @@ popd
 
 ### FDCLONE ###
 _build_fdclone() {
-local VERSION="3.01e"
+local VERSION="3.01h"
 local FOLDER="FD-${VERSION}"
 local FILE="${FOLDER}.tar.gz"
 local URL="http://www.unixusers.net/src/fdclone/${FILE}"
